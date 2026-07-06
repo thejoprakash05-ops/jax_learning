@@ -143,7 +143,20 @@ Implications for the plan:
 
 # Testing
 
-_(pending)_
+## Step 1 — Scaffolding & environment setup
+
+`tests/test_environment.py` — 4 tests, exercising the real toolchain (no mocks):
+- `test_jax_has_a_cpu_device` — confirms `jax.devices()` returns a CPU device.
+- `test_jit_compiles_and_executes_correctly` — `jax.jit` compiles and runs a function,
+  produces the correct numeric result.
+- `test_optax_optimizer_can_be_constructed_and_used` — builds an Adam optimizer, runs a real
+  `init`/`update`/`apply_updates` cycle, confirms params actually change.
+- `test_web_and_test_stack_importable` — `fastapi`, `uvicorn`, `httpx`, `matplotlib` import
+  cleanly.
+
+Result: `4 passed in 2.41s` (run via `.venv/Scripts/python.exe -m pytest tests/ -v`).
+
+No persisted data or UI in this step, so DB verification and screenshots don't apply.
 
 # Commits
 
