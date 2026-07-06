@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+checkpoints/*.msgpack
+artifacts/xla/*
+artifacts/metrics/*
+!artifacts/xla/.gitkeep
+!artifacts/metrics/.gitkeep
+*.egg-info/
+.pytest_cache/

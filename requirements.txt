@@ -1,0 +1,10 @@
+jax
+jaxlib
+optax
+fastapi
+uvicorn
+httpx
+pytest
+numpy
+matplotlib
+tensorboard-plugin-profile
